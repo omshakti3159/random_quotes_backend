@@ -36,4 +36,5 @@
 }
 .btn_container button:focus{
     outline: none;
+    border: none;
 }
