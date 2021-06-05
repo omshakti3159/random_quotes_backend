@@ -13,12 +13,10 @@ const navStyle={
 const Navbar = () => {
     const [id,setid]=useState('')
     const [name,setname]=useState('')
-    const [email,setemail]=useState('')
     const [img,setimg]=useState('')
     const responseGoogle= (response)=>{
         setid(response.profileObj.googleId)
         setname(response.profileObj.name)
-        setemail(response.profileObj.email)
         setimg(response.profileObj.imageUrl)
     }
     const responseGoogleFailure=()=>{
