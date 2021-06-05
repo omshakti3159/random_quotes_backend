@@ -17,7 +17,7 @@ const ShowQuotes = () => {
     // }
     useEffect(() => {
        apicall()
-    }, [""])
+    }, [])
     return (
             <div>
                 <div className="quotes_container">
