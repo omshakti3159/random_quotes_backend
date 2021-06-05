@@ -34,3 +34,6 @@
     border-radius: 999px;
     box-shadow: 0 0 10px 5px pink;
 }
+.btn_container button:focus{
+    outline: none;
+}
