@@ -11,7 +11,7 @@ let db
 const app = express()
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(bodyParser.json())
-app.use('cors')
+app.use(cors())
 
 app.get('/',(req,res)=>{
     db.collection("users").find({}).toArray((err ,result)=>{
