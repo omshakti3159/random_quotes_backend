@@ -39,7 +39,7 @@ app.post('/newuser',async(req,res)=>{
     else{
          db.collection('users').insertOne(user,(err)=>{
             if(err) throw err
-                res.send(user)
+                res.send([user])
         })
     }
 })
