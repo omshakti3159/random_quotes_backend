@@ -31,13 +31,13 @@ app.post('/newuser',async(req,res)=>{
     }
     let count=await db.collection('users').countDocuments({email:req.body.email})
     if(count){
-        db.collection('users').find({email:req.body.email}).toArray((err,resultDocs)=>{
+        await db.collection('users').find({email:req.body.email}).toArray((err,resultDocs)=>{
             if(err) throw err
             res.send(resultDocs)
         })
     }
     else{
-         db.collection('users').insertOne(user,(err)=>{
+        await db.collection('users').insertOne(user,(err)=>{
             if(err) throw err
                 res.send([user])
         })
